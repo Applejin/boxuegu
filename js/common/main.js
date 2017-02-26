@@ -1,11 +1,12 @@
 requirejs.config({
     baseUrl: '/',
     paths: {
-        //µÚÈı·½µÄÂ·¾¶ÅäÖÃ
+        // ç¬¬ä¸‰æ–¹åº“çš„è·¯å¾„é…ç½®
         jquery: 'lib/jquery/jquery.min',
         bootstrap: 'lib/bootstrap/js/bootstrap.min',
+        common: 'js/common/common',
 
-        //×Ô¼ºµÄÂ·¾¶ÅäÖÃ
+        // è‡ªå·±å†™çš„è·¯å¾„é…ç½®
         //user
         userList: 'js/user/list',
         userProfile: 'js/user/profile',
@@ -38,12 +39,12 @@ requirejs.config({
     }
 });
 
-//ËùÓĞµÄÒ³Ãæ¶¼ĞèÒªÕâÁ½¸öjs£¬ÏÈ¼ÓÔØËûÃÇ
-require(['jquery','bootstrap']);
+// æ‰€æœ‰çš„é¡µé¢éƒ½éœ€è¦è¿™ä¸¤ä¸ªjsï¼Œå…ˆåŠ è½½ä»–ä»¬ã€‚
+require(['jquery','bootstrap','common']);
 
 /*
-* ÕâÀï»ñÈ¡Ò³ÃæµÄpathname£¬È»ºó¶ÔÓ¦µÄ¼ÓÔØjs
-* */
+ *è¿™é‡Œè·å–é¡µé¢çš„pathnameï¼Œç„¶åå¯¹åº”çš„åŠ è½½jsã€‚
+ * */
 (function(window){
     var pathname = window.location.pathname;
     switch(pathname){
