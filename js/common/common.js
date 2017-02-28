@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define(['jquery','jqueryCookie'],function($,undefined){
     $('.navs a').click(function(){
         $(this).next().slideToggle();
     });
@@ -17,13 +17,12 @@ define(['jquery'],function($){
     var userInfo = null;
     try {
         userInfo = JSON.parse($.cookie('userInfo'));
+
     }catch(e){
         userInfo = {};
     }
-
     // 然后展示到左侧导航
     $('.aside .profile h4').html(userInfo.tc_name? userInfo.tc_name : '小黑');
     $('.aside .profile img').attr('src',userInfo.tc_avatar? userInfo.tc_avatar:'/img/default.png');
-
 
 });
