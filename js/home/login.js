@@ -1,4 +1,4 @@
-define(['jquery','jqueryCookie'],function($,undefined){
+define(['jquery','jqueryCookie','nprogress'],function($,undefined,nprogress){
 
     /**
      * 展示用户的历史登陆头像：
@@ -43,6 +43,8 @@ define(['jquery','jqueryCookie'],function($,undefined){
         });
         return false;
     });
+    // 该页所有的js加载完毕，进度条结束。
+    nprogress.done();
 
 });
 

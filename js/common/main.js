@@ -10,7 +10,7 @@ requirejs.config({
 
         // 自己写的路径配置
         common: 'js/common/common',
-        login: 'js/home/login',
+        index: 'js/index',
 
         //user
         userList: 'js/user/list',
@@ -45,9 +45,9 @@ requirejs.config({
 });
 
 // 优先以最快的速度开启页面进度条，其他的js加载延后。
-require(['nprogress',function(){
+require(['nprogress'],function(nprogress){
     nprogress.start();
-}]);
+});
 
 
 require(['jquery','bootstrap','common']);
@@ -133,6 +133,9 @@ require(['jquery','bootstrap','common']);
             break;
         case '/html/teacher/list.html':
             require(['teacherList']);
+            break;
+        case '/':
+            require(['index']);
             break;
     }
 })(window);
