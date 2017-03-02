@@ -6,9 +6,13 @@ requirejs.config({
         bootstrap: 'lib/bootstrap/js/bootstrap.min',
         jqueryCookie: 'lib/jquery-cookie/jquery.cookie',
         nprogress: 'lib/nprogress/nprogress',
+        template: 'lib/artTemplate-3.0.1/template',
+        datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
+        datepickerLanguage: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
 
 
         // 自己写的路径配置
+        util: 'js/common/util',
         common: 'js/common/common',
         index: 'js/index',
 
