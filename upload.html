@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/lib/uploadify/uploadify.css" />
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/uploadify/jquery.uploadify.js"></script>
+</head>
+<body>
+<input type="file" id="uploadify" />
+<img src="">
+<script>
+    $('#uploadify').uploadify({
+        swf: './lib/uploadify/uploadify.swf',
+        uploader: './upload.php',
+//        fileObjName: 'avatar',
+        'fileTypeExts' : '*.gif; *.jpg; *.png',
+//        'fileSizeLimit' : '5M',
+        onUploadSuccess:  function(file, data) {
+            console.log(file);
+            console.log(data);
+            $('img').attr('src', data);
+        }
+    });
+</script>
+</body>
+</html>
