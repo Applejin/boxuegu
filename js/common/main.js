@@ -2,12 +2,12 @@ requirejs.config({
     baseUrl: '/',
     paths: {
         // 第三方库的路径配置
-        jquery: 'lib/jquery/jquery.min',
-        bootstrap: 'lib/bootstrap/js/bootstrap.min',
+        jquery: 'node_modules/jquery/jquery.min',
+        bootstrap: 'node_modules/bootstrap/dist/js/bootstrap.min',
         jqueryCookie: 'lib/jquery-cookie/jquery.cookie',
         nprogress: 'lib/nprogress/nprogress',
-        template: 'lib/artTemplate-3.0.1/template',
-        datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
+        template: 'node_modules/art-template/dist/template',
+        datepicker: 'node_modules/bootstrap-datepicker/js/bootstrap-datepicker',
         datepickerLanguage: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         region: 'lib/region/jquery.region',
         ckeditor: 'lib/ckeditor/ckeditor',
